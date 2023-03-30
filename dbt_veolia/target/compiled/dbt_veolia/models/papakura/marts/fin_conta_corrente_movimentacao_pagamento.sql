@@ -1,0 +1,9 @@
+SELECT
+ap.ID_PAGAMENTO as ID_CONTA_CORRENTE_MOVIMENTACAO_PAGAMENTO,
+fccm.ID_CONTA_CORRENTE_MOVIMENTACAO as ID_CONTA_CORRENTE_MOVIMENTACAO,
+ap.ID_PAGAMENTO as ID_PAGAMENTO,
+ap.VL_DOCUMENTO_ARRECADACAO as VL_BAIXADO,
+cast(1 as BIT) as FL_CONCLUIDO
+FROM
+"papakura_20221223"."dbo_mig"."arr_pagamento" ap
+inner join "papakura_20221223"."dbo_mig"."fin_conta_corrente_movimentacao"fccm on fccm.MIG_DKEY_TEMP = ap.MIG_DKEY_TEMP

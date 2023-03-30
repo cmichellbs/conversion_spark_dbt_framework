@@ -1,0 +1,111 @@
+
+   
+  USE [papakura_20221223];
+  if object_id ('"dbo_mig"."TARIFS_ADJ__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "dbo_mig"."TARIFS_ADJ__dbt_tmp_temp_view"
+      end
+
+
+   
+   
+  USE [papakura_20221223];
+  if object_id ('"dbo_mig"."TARIFS_ADJ__dbt_tmp"','U') is not null
+      begin
+      drop table "dbo_mig"."TARIFS_ADJ__dbt_tmp"
+      end
+
+
+   USE [papakura_20221223];
+   EXEC('create view "dbo_mig"."TARIFS_ADJ__dbt_tmp_temp_view" as
+    WITH 
+TC AS (SELECT TC.*,
+
+CASE 
+	WHEN TC.TARC$CODE       NOT 
+	IN (SELECT DISTINCT CRAT$CODE FROM TARRATE)
+	THEN TC.TARC$TEMPLATE ELSE TC.TARC$CODE 
+END AS TARC$CODE2
+
+
+
+FROM "papakura_20221223"."dbo"."TARCHARGE" TC
+)
+,BASE1 AS (SELECT ECP.*,1 as CH_CATEGORIA_TARIFA FROM "papakura_20221223"."dbo"."EMS_CON_PLAN" ECP
+
+where ECPLAN_DESC like ''%Residential%'' or ECPLAN_DESC like ''%Domestic%''
+
+UNION ALL
+
+SELECT ECP.*,2 as CH_CATEGORIA_TARIFA FROM  "papakura_20221223"."dbo"."EMS_CON_PLAN" ECP
+
+where ECPLAN_KEY not IN (SELECT ECP.ECPLAN_KEY FROM "papakura_20221223"."dbo"."EMS_CON_PLAN" ECP
+
+where ECPLAN_DESC like ''%Residential%'' or ECPLAN_DESC like ''%Domestic%''))
+
+,BASE AS (select ECP.ECPLAN_KEY,
+
+MAX(CASE WHEN TR.CRAT$ANCODE=''WSUPP'' AND TR.CRAT$CODE <> ''WSUPP0''THEN ISNULL(TC.TARC$UNITS,1) ELSE NULL END)  AS WSUPP,
+MAX(CASE WHEN TR.CRAT$ANCODE=''WSERV'' AND TR.CRAT$CODE <>''WSERV0'' THEN ISNULL(TC.TARC$UNITS,1) ELSE NULL END)  AS WSERV,
+MAX(CASE WHEN TR.CRAT$ANCODE=''WVOL'' AND TR.CRAT$CODE <>''WVOL0''  THEN ISNULL(TC.TARC$UNITS,1) ELSE NULL END)  AS WVOL,
+MAX(CASE WHEN TR.CRAT$ANCODE=''STREA'' AND TR.CRAT$CODE <>''STREA0''  THEN ISNULL(TC.TARC$UNITS,1) ELSE NULL END)  AS STREA,
+MAX(CASE WHEN TR.CRAT$ANCODE=''SSERV''  AND TR.CRAT$CODE <>''SSERV0'' THEN ISNULL(TC.TARC$UNITS,1) ELSE NULL END)  AS SSERV,
+MAX(CASE WHEN TR.CRAT$ANCODE=''SVOL'' AND TR.CRAT$CODE <>''SVOL0''  THEN ISNULL(TC.TARC$UNITS,1) ELSE NULL END)  AS SVOL,
+MAX(CRAT$RATE) AS VL_TARIFA_ESGOTO,
+
+ECP.CH_CATEGORIA_TARIFA
+
+
+from BASE1 ECP
+LEFT JOIN "papakura_20221223"."dbo"."EMS_CON_PLAN#REGISTER_LIST" ECPR ON ECPR.ECPLAN_KEY = ECP.ECPLAN_KEY
+LEFT JOIN TC ON TC.TARC$CODE = ECPR.ECPLAN_TARCODE 
+
+LEFT JOIN "papakura_20221223"."dbo"."TARRATE" TR ON TR.CRAT$CODE  = TC.TARC$CODE2 
+GROUP BY ECP.ECPLAN_KEY,CH_CATEGORIA_TARIFA)
+
+,FINAL AS (SELECT BASE.ECPLAN_KEY, BASE.CH_CATEGORIA_TARIFA,
+SUM(CASE WHEN WVOL IS NULL THEN (COALESCE(WSUPP,0)+COALESCE(WSERV,0))/2 ELSE WVOL END) AS WVOL,
+SUM(STREA) AS STREA,
+SUM(SSERV) AS SSERV,
+SUM(SVOL) AS SVOL,
+max(VL_TARIFA_ESGOTO/1000000) as VL_TARIFA_ESGOTO
+
+FROM BASE
+GROUP BY BASE.ECPLAN_KEY,CH_CATEGORIA_TARIFA)
+
+
+SELECT FINAL.*,
+COALESCE((CASE WHEN SVOL IS NULL THEN SSERV ELSE SVOL END),0) *100 AS ESGOTO_COLETADO,
+COALESCE((CASE WHEN SVOL IS NULL THEN STREA ELSE SVOL END),0) *100 AS ESGOTO_TRATADO
+
+
+FROM FINAL
+
+
+--select * from TC
+    ');
+
+   SELECT * INTO "papakura_20221223"."dbo_mig"."TARIFS_ADJ__dbt_tmp" FROM
+    "papakura_20221223"."dbo_mig"."TARIFS_ADJ__dbt_tmp_temp_view"
+
+   
+   
+  USE [papakura_20221223];
+  if object_id ('"dbo_mig"."TARIFS_ADJ__dbt_tmp_temp_view"','V') is not null
+      begin
+      drop view "dbo_mig"."TARIFS_ADJ__dbt_tmp_temp_view"
+      end
+
+
+   use [papakura_20221223];
+  if EXISTS (
+        SELECT * FROM
+        sys.indexes WHERE name = 'dbo_mig_TARIFS_ADJ__dbt_tmp_cci'
+        AND object_id=object_id('dbo_mig_TARIFS_ADJ__dbt_tmp')
+    )
+  DROP index "dbo_mig"."TARIFS_ADJ__dbt_tmp".dbo_mig_TARIFS_ADJ__dbt_tmp_cci
+  CREATE CLUSTERED COLUMNSTORE INDEX dbo_mig_TARIFS_ADJ__dbt_tmp_cci
+    ON "dbo_mig"."TARIFS_ADJ__dbt_tmp"
+
+   
+

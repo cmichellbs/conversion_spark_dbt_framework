@@ -1,0 +1,15 @@
+pyodbc
+pandas
+dbt-postgres==1.3.0
+dbt-sqlserver==1.3.0
+ipykernel
+ipython
+pyspark
+python-dotenv
+PyYAML
+rapidfuzz
+requests
+six
+SQLAlchemy==1.4.43
+pathlib
+pymysql

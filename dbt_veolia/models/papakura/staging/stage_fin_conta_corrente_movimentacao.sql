@@ -1,0 +1,3 @@
+select FCCM.ID_CONTA_CORRENTE_MOVIMENTACAO, FCCM.INVOICE
+FROM {{ref('fin_conta_corrente_movimentacao')}} FCCM
+WHERE FCCM.DTYPE = 'FATURA'

@@ -1,0 +1,8 @@
+SELECT
+'2022-01-01' as DT_FERIADO,
+coalesce('Feriado', 'Feriado') as NM_FERIADO,
+'2022-01-01' as DT_REGISTRO,
+1 AS CH_MUNICIPIO,
+1 as CH_ATIVO,
+null as CH_TIPO_FERIADO,
+28 as  ID_UF

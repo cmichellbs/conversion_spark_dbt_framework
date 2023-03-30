@@ -1,0 +1,176 @@
+2023-03-23 16:29:45 INFO database connected
+2023-03-23 16:29:46 INFO database connected
+2023-03-23 16:34:47 INFO 3217/3217 constraints droped
+2023-03-23 16:34:57 INFO preimport executed
+2023-03-23 16:35:27 INFO tab_diametro_hidrometro migrada
+2023-03-23 16:35:30 INFO cad_endereco migrada
+2023-03-23 16:35:33 INFO cad_hidrometro migrada
+2023-03-23 16:35:35 INFO fat_fatura_debito_conta migrada
+2023-03-23 16:35:36 INFO seg_usuario migrada
+2023-03-23 16:35:40 INFO tab_faixa_logradouro migrada
+2023-03-23 16:35:41 INFO tab_posicao_cavalete migrada
+2023-03-23 16:35:49 INFO cad_documento_unidade migrada
+2023-03-23 16:35:59 INFO fat_parcela_servico_unidade migrada
+2023-03-23 16:36:00 INFO fat_regra_ocorrencia migrada
+2023-03-23 16:36:13 INFO fat_servico_unidade migrada
+2023-03-23 16:36:14 INFO tab_classe_metrologica migrada
+2023-03-23 16:36:15 INFO cad_unidade_orgao_centralizador migrada
+2023-03-23 16:36:17 INFO tab_percentual_indice_correcao migrada
+2023-03-23 16:36:18 INFO tab_localizacao migrada
+2023-03-23 16:36:21 INFO cad_cliente migrada
+2023-03-23 16:36:22 INFO tab_tarifa migrada
+2023-03-23 16:40:06 INFO fat_fatura migrada
+2023-03-23 16:40:07 INFO tab_convenio_agente_arrecadador migrada
+2023-03-23 16:40:08 INFO tab_bairro migrada
+2023-03-23 16:41:27 INFO fat_leitura_unidade_ligacao_agua migrada
+2023-03-23 16:41:28 INFO fat_grupo_faturamento migrada
+2023-03-23 16:41:32 INFO fat_parcela_servico_contrato migrada
+2023-03-23 16:41:33 INFO ope_setor_operacional migrada
+2023-03-23 16:41:35 INFO med_rota_leitura_agua_sequencia migrada
+2023-03-23 16:44:48 INFO fin_conta_corrente_movimentacao migrada
+2023-03-23 16:45:15 ERROR An error occurred while calling o1159.save.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 26.0 failed 1 times, most recent failure: Lost task 0.0 in stage 26.0 (TID 26) (fedora executor driver): java.sql.BatchUpdateException: Batch entry 9.326 INSERT INTO public.fat_consumo_agua ("id_consumo_agua","qt_volume_faturado","qt_volume_afaturar","qt_volume_lido","dt_mes_ref_consumo","qt_saldo_consumo","fl_considera_consumo_media","qt_volume_medio","fl_verificacao_leitura","fl_comunicado","qt_volume_real","fl_ligacao_cortada","qt_volume_esgoto_faturado","qt_volume_devolvido","dt_leitura_unidade","qt_dias_consumo","ch_tipo_consumo_faturado","ch_tipo_media","id_unidade_ligacao_agua","ch_matricula_unidade","id_unidade_ligacao_esgoto","ch_tipo_faturamento_esgoto","id_leiturista","mig_pk_temp","mig_data_anterior_temp","mig_data_atual_temp","qt_meses_consumo") VALUES (1010568,0.00,0,0,NULL,0,'S',NULL,NULL,'S',0,'N',NULL,NULL,'2022-10-02 00:00:00-03',91,2,NULL,21,11000021,NULL,1,1,511000848875,'2022-07-04 00:00:00-03','2022-10-02 23:00:00-03',3) was aborted: ERROR: null value in column "dt_mes_ref_consumo" of relation "fat_consumo_agua" violates not-null constraint
+  Detalhe: Failing row contains (1010568, 0, 0, 0, null, 0, S, null, null, S, 0, N, null, null, 2022-10-02 00:00:00, 91, 2, null, 21, 11000021, null, 1, 1, 2023-03-23 19:44:52.601363, 2023-03-23 19:44:52.601363, 3, 511000848875, 2022-07-04 00:00:00-03, 2022-10-02 23:00:00-03).  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2367)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2099)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1456)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1481)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:546)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:893)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:916)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1684)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:708)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:868)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:867)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1011)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1011)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2268)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "dt_mes_ref_consumo" of relation "fat_consumo_agua" violates not-null constraint
+  Detalhe: Failing row contains (1010568, 0, 0, 0, null, 0, S, null, null, S, 0, N, null, null, 2022-10-02 00:00:00, 91, 2, null, 21, 11000021, null, 1, 1, 2023-03-23 19:44:52.601363, 2023-03-23 19:44:52.601363, 3, 511000848875, 2022-07-04 00:00:00-03, 2022-10-02 23:00:00-03).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	... 21 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2672)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2608)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2607)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2607)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1182)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1182)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1182)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2860)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2802)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2791)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:952)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2228)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2249)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2268)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2293)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1011)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:406)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1009)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:867)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:47)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:584)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:176)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:584)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:560)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:116)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:860)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:390)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:363)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:247)
+	at jdk.internal.reflect.GeneratedMethodAccessor50.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.sql.BatchUpdateException: Batch entry 9.326 INSERT INTO public.fat_consumo_agua ("id_consumo_agua","qt_volume_faturado","qt_volume_afaturar","qt_volume_lido","dt_mes_ref_consumo","qt_saldo_consumo","fl_considera_consumo_media","qt_volume_medio","fl_verificacao_leitura","fl_comunicado","qt_volume_real","fl_ligacao_cortada","qt_volume_esgoto_faturado","qt_volume_devolvido","dt_leitura_unidade","qt_dias_consumo","ch_tipo_consumo_faturado","ch_tipo_media","id_unidade_ligacao_agua","ch_matricula_unidade","id_unidade_ligacao_esgoto","ch_tipo_faturamento_esgoto","id_leiturista","mig_pk_temp","mig_data_anterior_temp","mig_data_atual_temp","qt_meses_consumo") VALUES (1010568,0.00,0,0,NULL,0,'S',NULL,NULL,'S',0,'N',NULL,NULL,'2022-10-02 00:00:00-03',91,2,NULL,21,11000021,NULL,1,1,511000848875,'2022-07-04 00:00:00-03','2022-10-02 23:00:00-03',3) was aborted: ERROR: null value in column "dt_mes_ref_consumo" of relation "fat_consumo_agua" violates not-null constraint
+  Detalhe: Failing row contains (1010568, 0, 0, 0, null, 0, S, null, null, S, 0, N, null, null, 2022-10-02 00:00:00, 91, 2, null, 21, 11000021, null, 1, 1, 2023-03-23 19:44:52.601363, 2023-03-23 19:44:52.601363, 3, 511000848875, 2022-07-04 00:00:00-03, 2022-10-02 23:00:00-03).  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2367)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2099)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1456)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1481)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:546)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:893)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:916)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1684)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:708)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:868)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:867)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1011)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1011)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2268)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "dt_mes_ref_consumo" of relation "fat_consumo_agua" violates not-null constraint
+  Detalhe: Failing row contains (1010568, 0, 0, 0, null, 0, S, null, null, S, 0, N, null, null, 2022-10-02 00:00:00, 91, 2, null, 21, 11000021, null, 1, 1, 2023-03-23 19:44:52.601363, 2023-03-23 19:44:52.601363, 3, 511000848875, 2022-07-04 00:00:00-03, 2022-10-02 23:00:00-03).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	... 21 more
+
+2023-03-23 16:45:17 INFO fin_conta_corrente migrada
+2023-03-23 16:45:17 INFO tab_tipo_leitura migrada
+2023-03-23 16:45:55 INFO fat_fatura_historico_consumo migrada
+2023-03-23 16:45:57 INFO cad_historico_situacao_ligacao_esgoto migrada
+2023-03-23 16:45:59 INFO cad_endereco_cliente migrada
+2023-03-23 16:46:00 INFO tab_tipo_atividade_economica migrada
+2023-03-23 16:46:01 INFO cad_dia_vencimento_alternativo migrada
+2023-03-23 16:46:02 INFO fat_servico_valor migrada
+2023-03-23 16:46:05 ERROR An error occurred while calling o1484.save
+2023-03-23 16:46:06 ERROR (pyodbc.OperationalError) ('08S01', '[08S01] [Microsoft][ODBC Driver 18 for SQL Server]Communication link failure (0) (SQLEndTran)')
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2023-03-23 16:46:06 ERROR <class 'pyodbc.Error'> returned a result with an error set
+2023-03-23 16:46:08 ERROR <built-in function connect> returned a result with an error set
+2023-03-23 16:46:20 ERROR An error occurred while calling o1533.save
+2023-03-23 16:46:21 ERROR An error occurred while calling o1542.load

@@ -1,0 +1,105 @@
+2023-03-23 17:15:11 INFO database connected
+2023-03-23 17:15:12 INFO database connected
+2023-03-23 17:19:50 INFO 3217/3217 constraints droped
+2023-03-23 17:20:00 INFO preimport executed
+2023-03-23 17:20:29 INFO tab_diametro_hidrometro migrada
+2023-03-23 17:20:32 INFO cad_endereco migrada
+2023-03-23 17:20:34 INFO cad_hidrometro migrada
+2023-03-23 17:20:36 INFO fat_fatura_debito_conta migrada
+2023-03-23 17:20:38 INFO seg_usuario migrada
+2023-03-23 17:20:41 INFO tab_faixa_logradouro migrada
+2023-03-23 17:20:42 INFO tab_posicao_cavalete migrada
+2023-03-23 17:20:49 INFO cad_documento_unidade migrada
+2023-03-23 17:20:58 INFO fat_parcela_servico_unidade migrada
+2023-03-23 17:20:59 INFO fat_regra_ocorrencia migrada
+2023-03-23 17:21:12 INFO fat_servico_unidade migrada
+2023-03-23 17:21:13 INFO tab_classe_metrologica migrada
+2023-03-23 17:21:14 INFO cad_unidade_orgao_centralizador migrada
+2023-03-23 17:21:15 INFO tab_percentual_indice_correcao migrada
+2023-03-23 17:21:16 INFO tab_localizacao migrada
+2023-03-23 17:21:19 INFO cad_cliente migrada
+2023-03-23 17:21:21 INFO tab_tarifa migrada
+2023-03-23 17:24:39 INFO fat_fatura migrada
+2023-03-23 17:24:40 INFO tab_convenio_agente_arrecadador migrada
+2023-03-23 17:24:41 INFO tab_bairro migrada
+2023-03-23 17:25:36 INFO fat_leitura_unidade_ligacao_agua migrada
+2023-03-23 17:25:38 INFO fat_grupo_faturamento migrada
+2023-03-23 17:25:42 INFO fat_parcela_servico_contrato migrada
+2023-03-23 17:25:43 INFO ope_setor_operacional migrada
+2023-03-23 17:25:45 INFO med_rota_leitura_agua_sequencia migrada
+2023-03-23 17:28:25 INFO fin_conta_corrente_movimentacao migrada
+2023-03-23 17:29:29 INFO fat_consumo_agua migrada
+2023-03-23 17:29:31 INFO fin_conta_corrente migrada
+2023-03-23 17:29:32 INFO tab_tipo_leitura migrada
+2023-03-23 17:29:52 INFO fat_fatura_historico_consumo migrada
+2023-03-23 17:29:54 INFO cad_historico_situacao_ligacao_esgoto migrada
+2023-03-23 17:29:56 INFO cad_endereco_cliente migrada
+2023-03-23 17:29:57 INFO tab_tipo_atividade_economica migrada
+2023-03-23 17:29:58 INFO cad_dia_vencimento_alternativo migrada
+2023-03-23 17:29:59 INFO fat_servico_valor migrada
+2023-03-23 17:32:21 INFO arr_pagamento migrada
+2023-03-23 17:32:24 INFO fat_leitura_intermediaria migrada
+2023-03-23 17:32:27 INFO cad_economia migrada
+2023-03-23 17:32:28 INFO tab_parametro_localizacao migrada
+2023-03-23 17:32:29 INFO cad_orgao_centralizador migrada
+2023-03-23 17:32:48 INFO fin_conta_corrente_movimentacao_pagamento migrada
+2023-03-23 17:32:51 INFO cad_movimentacao_hidrometro migrada
+2023-03-23 17:32:52 INFO tab_agente_arrecadador migrada
+2023-03-23 17:32:53 INFO cad_feriado migrada
+2023-03-23 17:32:54 INFO tab_tabela_tarifaria_servico migrada
+2023-03-23 17:32:56 INFO fat_data_estagio migrada
+2023-03-23 17:32:57 INFO cad_unidade_alerta migrada
+2023-03-23 17:33:00 INFO cad_unidade_ligacao_agua migrada
+2023-03-23 17:33:01 INFO tab_categoria_tipo_tarifa migrada
+2023-03-23 17:33:03 INFO tab_tarifa_servico_definicao migrada
+2023-03-23 17:33:04 INFO cad_fechamentos migrada
+2023-03-23 17:33:32 INFO fat_unidade_comercial_referencia migrada
+2023-03-23 17:33:33 INFO ope_equipe migrada
+2023-03-23 17:33:34 INFO tab_servico_definicao migrada
+2023-03-23 17:34:17 INFO fat_fatura_componente migrada
+2023-03-23 17:34:23 INFO cad_unidade_comercial migrada
+2023-03-23 17:34:24 INFO tab_agencia migrada
+2023-03-23 17:34:25 INFO fat_debito_conta migrada
+2023-03-23 17:34:28 INFO cad_cliente_unidade_comercial migrada
+2023-03-23 17:34:31 INFO tab_logradouro migrada
+2023-03-23 17:35:02 INFO arr_pagamento_documento migrada
+2023-03-23 17:35:03 INFO tab_tabela_tarifaria migrada
+2023-03-23 17:35:04 INFO tab_tabela_tarifaria_material migrada
+2023-03-23 17:35:06 INFO cad_historico_situacao_ligacao_agua migrada
+2023-03-23 17:35:13 INFO fat_fatura_servico migrada
+2023-03-23 17:35:30 INFO fin_conta_corrente_movimentacao_fatura migrada
+2023-03-23 17:35:32 INFO cad_endereco_unidade migrada
+2023-03-23 17:35:34 INFO cad_unidade_ligacao_esgoto migrada
+2023-03-23 17:35:50 INFO arr_pagamento_nz migrada
+2023-03-23 17:35:51 INFO tab_modelo_hidrometro migrada
+2023-03-23 17:35:52 INFO fat_contrato migrada
+2023-03-23 17:36:27 INFO fat_fatura_componente_tabela_tarifaria migrada
+2023-03-23 17:38:35 INFO cad_historico_observacao_unidade_comercial migrada
+2023-03-23 17:38:36 INFO fat_calendario_faturamento migrada
+2023-03-23 17:38:38 INFO tab_tipo_logradouro migrada
+2023-03-23 17:38:39 INFO med_rota_leitura_agua migrada
+2023-03-23 17:38:40 INFO tab_faixa_tarifa migrada
+2023-03-23 17:38:41 INFO fat_agendamento_tarifas_servico migrada
+2023-03-23 17:39:10 INFO arr_pagamento_fatura migrada
+2023-03-23 17:40:39 INFO posimport executed
+2023-03-23 17:41:01 ERROR (psycopg2.errors.UndefinedTable) relation "tab_situacao_captura_ocr" does not exist
+LINE 1: ...a_tabela = (select coalesce(max(None),0) + 1 from tab_situac...
+                                                             ^
+
+[SQL: update inf_tabela_basica set id_proxima_tabela = (select coalesce(max(None),0) + 1 from tab_situacao_captura_ocr) where nm_tabela_banco = 'tab_situacao_captura_ocr';]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2023-03-23 17:41:01 ERROR (psycopg2.errors.UndefinedColumn) column "none" does not exist
+LINE 1: ...sica set id_proxima_tabela = (select coalesce(max(None),0) +...
+                                                             ^
+
+[SQL: update inf_tabela_basica set id_proxima_tabela = (select coalesce(max(None),0) + 1 from tab_tipo_instalacao_cavalete) where nm_tabela_banco = 'tab_tipo_instalacao_cavalete';]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2023-03-23 17:41:14 DEBUG não foi possivel executar create_all_constraints
+2023-03-23 17:41:14 ERROR (psycopg2.errors.ForeignKeyViolation) insert or update on table "arr_fatura_pagamento" violates foreign key constraint "fk2439fdb086ddda83"
+DETAIL:  Key (id_fatura)=(1016782) is not present in table "fat_fatura".
+
+[SQL: ALTER TABLE arr_fatura_pagamento ADD CONSTRAINT fk2439fdb086ddda83 FOREIGN KEY (id_fatura) REFERENCES fat_fatura(id_fatura);]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-03-23 17:41:14 INFO 3217 constraints created
+2023-03-23 17:41:16 INFO Finalizado!
+2023-03-23 17:41:19 INFO --- 21.753418437639873 minutes elapsed ---

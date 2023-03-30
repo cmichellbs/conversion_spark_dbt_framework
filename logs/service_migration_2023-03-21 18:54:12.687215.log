@@ -1,0 +1,105 @@
+2023-03-21 18:54:16 INFO database connected
+2023-03-21 18:54:17 INFO database connected
+2023-03-21 18:59:12 INFO 3217/3217 constraints droped
+2023-03-21 18:59:22 INFO preimport executed
+2023-03-21 18:59:51 INFO tab_diametro_hidrometro migrada
+2023-03-21 18:59:54 INFO cad_endereco migrada
+2023-03-21 18:59:56 INFO cad_hidrometro migrada
+2023-03-21 18:59:58 INFO fat_fatura_debito_conta migrada
+2023-03-21 19:00:00 INFO seg_usuario migrada
+2023-03-21 19:00:03 INFO tab_faixa_logradouro migrada
+2023-03-21 19:00:04 INFO tab_posicao_cavalete migrada
+2023-03-21 19:00:13 INFO cad_documento_unidade migrada
+2023-03-21 19:00:29 INFO fat_parcela_servico_unidade migrada
+2023-03-21 19:00:30 INFO fat_regra_ocorrencia migrada
+2023-03-21 19:00:44 INFO fat_servico_unidade migrada
+2023-03-21 19:00:45 INFO tab_classe_metrologica migrada
+2023-03-21 19:00:45 INFO cad_unidade_orgao_centralizador migrada
+2023-03-21 19:00:46 INFO tab_percentual_indice_correcao migrada
+2023-03-21 19:00:47 INFO tab_localizacao migrada
+2023-03-21 19:00:51 INFO cad_cliente migrada
+2023-03-21 19:00:52 INFO tab_tarifa migrada
+2023-03-21 19:05:04 INFO fat_fatura migrada
+2023-03-21 19:05:05 INFO tab_convenio_agente_arrecadador migrada
+2023-03-21 19:05:06 INFO tab_bairro migrada
+2023-03-21 19:06:20 INFO fat_leitura_unidade_ligacao_agua migrada
+2023-03-21 19:06:21 INFO fat_grupo_faturamento migrada
+2023-03-21 19:06:24 INFO fat_parcela_servico_contrato migrada
+2023-03-21 19:06:25 INFO ope_setor_operacional migrada
+2023-03-21 19:06:28 INFO med_rota_leitura_agua_sequencia migrada
+2023-03-21 19:09:45 INFO fin_conta_corrente_movimentacao migrada
+2023-03-21 19:10:58 INFO fat_consumo_agua migrada
+2023-03-21 19:11:00 INFO fin_conta_corrente migrada
+2023-03-21 19:11:01 INFO tab_tipo_leitura migrada
+2023-03-21 19:11:25 INFO fat_fatura_historico_consumo migrada
+2023-03-21 19:11:27 INFO cad_historico_situacao_ligacao_esgoto migrada
+2023-03-21 19:11:30 INFO cad_endereco_cliente migrada
+2023-03-21 19:11:31 INFO tab_tipo_atividade_economica migrada
+2023-03-21 19:11:32 INFO cad_dia_vencimento_alternativo migrada
+2023-03-21 19:11:33 INFO fat_servico_valor migrada
+2023-03-21 19:14:13 INFO arr_pagamento migrada
+2023-03-21 19:14:15 INFO fat_leitura_intermediaria migrada
+2023-03-21 19:14:19 INFO cad_economia migrada
+2023-03-21 19:14:20 INFO tab_parametro_localizacao migrada
+2023-03-21 19:14:21 INFO cad_orgao_centralizador migrada
+2023-03-21 19:14:44 INFO fin_conta_corrente_movimentacao_pagamento migrada
+2023-03-21 19:14:48 INFO cad_movimentacao_hidrometro migrada
+2023-03-21 19:14:49 INFO tab_agente_arrecadador migrada
+2023-03-21 19:14:50 INFO cad_feriado migrada
+2023-03-21 19:14:51 INFO tab_tabela_tarifaria_servico migrada
+2023-03-21 19:14:52 INFO fat_data_estagio migrada
+2023-03-21 19:14:53 INFO cad_unidade_alerta migrada
+2023-03-21 19:14:57 INFO cad_unidade_ligacao_agua migrada
+2023-03-21 19:14:58 INFO tab_categoria_tipo_tarifa migrada
+2023-03-21 19:14:59 INFO tab_tarifa_servico_definicao migrada
+2023-03-21 19:15:00 INFO cad_fechamentos migrada
+2023-03-21 19:15:23 INFO fat_unidade_comercial_referencia migrada
+2023-03-21 19:15:24 INFO ope_equipe migrada
+2023-03-21 19:15:25 INFO tab_servico_definicao migrada
+2023-03-21 19:16:10 INFO fat_fatura_componente migrada
+2023-03-21 19:16:15 INFO cad_unidade_comercial migrada
+2023-03-21 19:16:17 INFO tab_agencia migrada
+2023-03-21 19:16:19 INFO fat_debito_conta migrada
+2023-03-21 19:16:22 INFO cad_cliente_unidade_comercial migrada
+2023-03-21 19:16:26 INFO tab_logradouro migrada
+2023-03-21 19:17:04 INFO arr_pagamento_documento migrada
+2023-03-21 19:17:05 INFO tab_tabela_tarifaria migrada
+2023-03-21 19:17:06 INFO tab_tabela_tarifaria_material migrada
+2023-03-21 19:17:08 INFO cad_historico_situacao_ligacao_agua migrada
+2023-03-21 19:17:13 INFO fat_fatura_servico migrada
+2023-03-21 19:17:30 INFO fin_conta_corrente_movimentacao_fatura migrada
+2023-03-21 19:17:33 INFO cad_endereco_unidade migrada
+2023-03-21 19:17:36 INFO cad_unidade_ligacao_esgoto migrada
+2023-03-21 19:17:59 INFO arr_pagamento_nz migrada
+2023-03-21 19:18:00 INFO tab_modelo_hidrometro migrada
+2023-03-21 19:18:01 INFO fat_contrato migrada
+2023-03-21 19:18:38 INFO fat_fatura_componente_tabela_tarifaria migrada
+2023-03-21 19:21:09 INFO cad_historico_observacao_unidade_comercial migrada
+2023-03-21 19:21:11 INFO fat_calendario_faturamento migrada
+2023-03-21 19:21:12 INFO tab_tipo_logradouro migrada
+2023-03-21 19:21:13 INFO med_rota_leitura_agua migrada
+2023-03-21 19:21:14 INFO tab_faixa_tarifa migrada
+2023-03-21 19:21:16 INFO fat_agendamento_tarifas_servico migrada
+2023-03-21 19:21:43 INFO arr_pagamento_fatura migrada
+2023-03-21 19:23:15 INFO posimport executed
+2023-03-21 19:23:37 ERROR (psycopg2.errors.UndefinedTable) relation "tab_situacao_captura_ocr" does not exist
+LINE 1: ...a_tabela = (select coalesce(max(None),0) + 1 from tab_situac...
+                                                             ^
+
+[SQL: update inf_tabela_basica set id_proxima_tabela = (select coalesce(max(None),0) + 1 from tab_situacao_captura_ocr) where nm_tabela_banco = 'tab_situacao_captura_ocr';]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2023-03-21 19:23:37 ERROR (psycopg2.errors.UndefinedColumn) column "none" does not exist
+LINE 1: ...sica set id_proxima_tabela = (select coalesce(max(None),0) +...
+                                                             ^
+
+[SQL: update inf_tabela_basica set id_proxima_tabela = (select coalesce(max(None),0) + 1 from tab_tipo_instalacao_cavalete) where nm_tabela_banco = 'tab_tipo_instalacao_cavalete';]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2023-03-21 19:24:02 DEBUG não foi possivel executar create_all_constraints
+2023-03-21 19:24:02 ERROR (psycopg2.errors.ForeignKeyViolation) insert or update on table "cad_historico_observacao_unidade_comercial" violates foreign key constraint "fk373d073037ae1413"
+DETAIL:  Key (id_usuario)=(50) is not present in table "seg_usuario".
+
+[SQL: ALTER TABLE cad_historico_observacao_unidade_comercial ADD CONSTRAINT fk373d073037ae1413 FOREIGN KEY (id_usuario) REFERENCES seg_usuario(id_usuario);]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-03-21 19:24:02 INFO 3217 constraints created
+2023-03-21 19:24:05 INFO Finalizado!
+2023-03-21 19:24:07 INFO --- 25.19708460966746 minutes elapsed ---

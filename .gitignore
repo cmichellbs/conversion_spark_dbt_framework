@@ -1,0 +1,14 @@
+.hypothesis/
+.ipynb_checkpoints/
+**papakura_DOCBDATA/***
+**papakura_DOCBDATA2/***
+./migration/__pycache__
+.vscode
+.pytest_cache
+./src/__pycache__
+./dbt_veolia/target/*
+!./dbt_veolia/target/catalog.json
+!./dbt_veolia/target/manifest.json
+./sansys_db/backup/*
+./.dbt
+./.env
